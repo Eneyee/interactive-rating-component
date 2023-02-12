@@ -17,16 +17,17 @@
 
 body {
     background-color: hsl(216, 12%, 8%);
-    margin: 0;
+    margin: 1.5rem;
+    min-height: 100vh;
     padding: 0;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    grid-auto-flow: row;
     overflow-x: hidden;
 }
 
-.main-container {
+.main-container, .ty-container {
     background-color: hsl(213, 19%, 18%);
     border-radius: 20px;
     width: 380px;
@@ -35,7 +36,9 @@ body {
     padding: 20px 25px;
 }
 
-h1 {
+
+
+h1, h2 {
     color: hsl(0, 0%, 100%);
     font-size: 30px;
     font-weight: 400;
@@ -63,14 +66,13 @@ p {
     border-radius: 50%;
     width: 3.5em;
     height: 3.5em;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin: 7px 5px;
     color: hsl(217, 12%, 63%);
     font-size: 15px;
     font-weight: 400;
     text-align: center;
+    padding-top: 0.2rem;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -85,17 +87,53 @@ p {
 }
 
 .btn-submit {
-    background-color: hsl(25, 97%, 53%);
+    background-color: hsl(25, 97%, 53%, 80%);
     border: none;
     border-radius: 1.5em;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%, 80%);
     font-size: 17px;
     text-align: center;
+    letter-spacing: 0.1rem;
     width: 19.3em;
     height: 2.5em;
     font-weight: 400;
     cursor: pointer;
+    padding-top: 0.2rem;
     margin-top: 1em;
     margin-left: 0;
     margin-right: 0;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+.ty-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ty-container h2 {
+    margin: 15px;
+}
+
+.ty-container p {
+    margin: 0 0 20px;
+}
+
+.ty-container .result-line {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(214, 22%, 23%);
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin-top: 40px;
+}
+
+.hidden {
+    display: none;
 }
